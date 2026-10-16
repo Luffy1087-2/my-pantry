@@ -1,0 +1,71 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\franc\\Documents\\repos\\my-pantry\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{14CB47E7-709C-792D-1428-0CEF61DA1D15}|MyPantry.Infrastructure\\MyPantry.Infrastructure.csproj|c:\\users\\franc\\documents\\repos\\my-pantry\\mypantry.infrastructure\\mypantry\\infrastructure\\data\\migrations\\mypantrydbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{14CB47E7-709C-792D-1428-0CEF61DA1D15}|MyPantry.Infrastructure\\MyPantry.Infrastructure.csproj|solutionrelative:mypantry.infrastructure\\mypantry\\infrastructure\\data\\migrations\\mypantrydbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{14CB47E7-709C-792D-1428-0CEF61DA1D15}|MyPantry.Infrastructure\\MyPantry.Infrastructure.csproj|c:\\users\\franc\\documents\\repos\\my-pantry\\mypantry.infrastructure\\data\\migrations\\20261015180446_initialcreate.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{14CB47E7-709C-792D-1428-0CEF61DA1D15}|MyPantry.Infrastructure\\MyPantry.Infrastructure.csproj|solutionrelative:mypantry.infrastructure\\data\\migrations\\20261015180446_initialcreate.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{14CB47E7-709C-792D-1428-0CEF61DA1D15}|MyPantry.Infrastructure\\MyPantry.Infrastructure.csproj|c:\\users\\franc\\documents\\repos\\my-pantry\\mypantry.infrastructure\\data\\migrations\\20261015180446_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{14CB47E7-709C-792D-1428-0CEF61DA1D15}|MyPantry.Infrastructure\\MyPantry.Infrastructure.csproj|solutionrelative:mypantry.infrastructure\\data\\migrations\\20261015180446_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "20261015180446_InitialCreate.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\franc\\Documents\\repos\\my-pantry\\MyPantry.Infrastructure\\Data\\Migrations\\20261015180446_InitialCreate.Designer.cs",
+              "RelativeDocumentMoniker": "MyPantry.Infrastructure\\Data\\Migrations\\20261015180446_InitialCreate.Designer.cs",
+              "ToolTip": "C:\\Users\\franc\\Documents\\repos\\my-pantry\\MyPantry.Infrastructure\\Data\\Migrations\\20261015180446_InitialCreate.Designer.cs",
+              "RelativeToolTip": "MyPantry.Infrastructure\\Data\\Migrations\\20261015180446_InitialCreate.Designer.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAADwvw4AAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-16T20:27:04.082Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MyPantryDbContextModelSnapshot.cs",
+              "DocumentMoniker": "C:\\Users\\franc\\Documents\\repos\\my-pantry\\MyPantry.Infrastructure\\MyPantry\\Infrastructure\\Data\\Migrations\\MyPantryDbContextModelSnapshot.cs",
+              "RelativeDocumentMoniker": "MyPantry.Infrastructure\\MyPantry\\Infrastructure\\Data\\Migrations\\MyPantryDbContextModelSnapshot.cs",
+              "ToolTip": "C:\\Users\\franc\\Documents\\repos\\my-pantry\\MyPantry.Infrastructure\\MyPantry\\Infrastructure\\Data\\Migrations\\MyPantryDbContextModelSnapshot.cs",
+              "RelativeToolTip": "MyPantry.Infrastructure\\MyPantry\\Infrastructure\\Data\\Migrations\\MyPantryDbContextModelSnapshot.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAAwAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-16T20:22:29.861Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "20261015180446_InitialCreate.cs",
+              "DocumentMoniker": "C:\\Users\\franc\\Documents\\repos\\my-pantry\\MyPantry.Infrastructure\\Data\\Migrations\\20261015180446_InitialCreate.cs",
+              "RelativeDocumentMoniker": "MyPantry.Infrastructure\\Data\\Migrations\\20261015180446_InitialCreate.cs",
+              "ToolTip": "C:\\Users\\franc\\Documents\\repos\\my-pantry\\MyPantry.Infrastructure\\Data\\Migrations\\20261015180446_InitialCreate.cs",
+              "RelativeToolTip": "MyPantry.Infrastructure\\Data\\Migrations\\20261015180446_InitialCreate.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-16T20:22:16.397Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

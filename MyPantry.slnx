@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="MyPantry.Api/MyPantry.Api.csproj" />
+  <Project Path="MyPantry.Core/MyPantry.Core.csproj" />
+  <Project Path="MyPantry.Infrastructure/MyPantry.Infrastructure.csproj" />
+  <Project Path="MyPantry.Web/MyPantry.Web.csproj" />
+</Solution>

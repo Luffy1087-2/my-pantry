@@ -1,0 +1,83 @@
+﻿# my-pantry
+
+A small .NET application for managing pantry products.
+
+## Stack
+- ASP.NET Core API
+- Entity Framework Core
+- SQL Server
+- Docker Compose
+
+## Solution structure
+- MyPantry.Api: REST API and static web UI
+- MyPantry.Core: domain models and contracts
+- MyPantry.Infrastructure: EF Core DbContext and repository implementation
+- MyPantry.Web: MVC sample project
+
+## Configuration
+
+### Environment Variables
+
+L'applicazione richiede un file `.env` nella root del progetto per configurare la connessione al database e altre impostazioni.
+
+#### `DB_SERVER`
+- **Descrizione**: Indirizzo e porta del server SQL Server
+- **Valore di default**: `localhost,1433`
+- **Esempi**: 
+  - Locale: `localhost,1433`
+  - Remoto: `my-server.database.windows.net,1433`
+  - Con nome istanza: `SERVER\SQLEXPRESS,1433`
+
+#### `DB_NAME`
+- **Descrizione**: Nome del database SQL Server
+- **Valore di default**: `MyPantryDb`
+- **Esempi**: `MyPantryDb`, `MyPantry_Production`
+
+#### `DB_USER`
+- **Descrizione**: Nome utente per l'autenticazione SQL Server
+- **Valore di default**: `sa` (System Administrator)
+- **Esempi**: 
+  - SQL Server: `sa`, `myuser`
+  - Azure SQL: `admin@myserver`
+- **Nota**: Per ambiente di produzione, usa un utente con privilegi limitati
+
+#### `DB_PASSWORD`
+- **Descrizione**: Password dell'utente SQL Server
+- **Valore di default**: `MyStrongPassword!123`
+- **Requisiti**:
+  - Minimo 8 caratteri
+  - Contiene maiuscole, minuscole, numeri e caratteri speciali
+  - Non deve contenere il nome utente o nome del database
+- **Nota**: Conserva questa password in un luogo sicuro, non commitarla in Git
+
+#### `DB_TRUST_SERVER_CERTIFICATE`
+- **Descrizione**: Consente la connessione a SQL Server con certificato auto-firmato (sviluppo locale)
+- **Valori ammessi**: `True`, `False`
+- **Valore di default**: `True`
+- **Consigliati per ambiente**:
+  - Sviluppo locale: `True`
+  - Produzione: `False` (richiede certificato valido)
+
+#### `ASPNETCORE_ENVIRONMENT`
+- **Descrizione**: Ambiente di esecuzione dell'applicazione
+- **Valori ammessi**: `Development`, `Staging`, `Production`
+- **Valore di default**: `Development`
+- **Comportamento per ambiente**:
+  - `Development`: Abilita Swagger UI, logging dettagliato
+  - `Staging`: Configurazione intermedia per pre-produzione
+  - `Production`: Disabilita debug, logging minimale, ottimizzazioni
+
+## Run locally
+1. Start Docker Desktop.
+2. Run `start.bat` from File Explorer or Command Prompt (or `.\start.ps1` from PowerShell). The script builds and starts SQL Server and the API, waits for the API health check, then opens the app in your browser.
+
+To stop the containers, run `docker compose down` from the project folder.
+
+The app is available at http://localhost:8080.
+
+The API endpoints are available at:
+- GET /api/products
+- POST /api/products
+- GET /api/products/{id}
+- PUT /api/products/{id}
+- DELETE /api/products/{id}

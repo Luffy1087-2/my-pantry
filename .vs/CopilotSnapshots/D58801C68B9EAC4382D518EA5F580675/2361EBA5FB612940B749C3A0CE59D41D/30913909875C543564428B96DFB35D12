@@ -1,0 +1,30 @@
+﻿# my-pantry
+
+A small .NET application for managing pantry products.
+
+## Stack
+- ASP.NET Core API
+- Entity Framework Core
+- SQL Server
+- Docker Compose
+
+## Solution structure
+- MyPantry.Api: REST API and static web UI
+- MyPantry.Core: domain models and contracts
+- MyPantry.Infrastructure: EF Core DbContext and repository implementation
+- MyPantry.Web: MVC sample project
+
+## Run locally
+1. Start Docker Desktop.
+2. Run `start.bat` from File Explorer or Command Prompt (or `.\start.ps1` from PowerShell). The script builds and starts SQL Server and the API, waits for the API health check, then opens the app in your browser.
+
+To stop the containers, run `docker compose down` from the project folder.
+
+The app is available at http://localhost:8080.
+
+The API endpoints are available at:
+- GET /api/products
+- POST /api/products
+- GET /api/products/{id}
+- PUT /api/products/{id}
+- DELETE /api/products/{id}

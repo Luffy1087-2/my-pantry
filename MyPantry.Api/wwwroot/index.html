@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Pantry</title>
+    <style>
+        :root {
+            --bg: #f4f7f0;
+            --panel: #ffffff;
+            --primary: #2f6f4f;
+            --primary-dark: #1d4d38;
+            --text: #1b1b1b;
+            --muted: #5f6c65;
+            --accent: #dfeee4;
+            --danger: #c85858;
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(180deg, var(--bg) 0%, #ebf3eb 100%);
+            color: var(--text);
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 32px 20px 60px;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 24px;
+        }
+
+        h1 {
+            margin: 0;
+            color: var(--primary-dark);
+            font-size: 2.3rem;
+        }
+
+        .card {
+            background: var(--panel);
+            border-radius: 18px;
+            box-shadow: 0 12px 30px rgba(38, 68, 56, 0.1);
+            padding: 24px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 24px;
+        }
+
+        label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        input, textarea, button {
+            border-radius: 10px;
+            border: 1px solid #d9e1d9;
+            font: inherit;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 12px 14px;
+            margin-bottom: 16px;
+            background: #f9fbf9;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 110px;
+        }
+
+        .checkbox-row {
+            display: flex;
+            gap: 24px;
+            margin-bottom: 12px;
+        }
+
+        .checkbox-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 600;
+        }
+
+        .checkbox-item input {
+            width: 18px;
+            height: 18px;
+            margin: 0;
+        }
+
+        button {
+            padding: 12px 18px;
+            border: none;
+            cursor: pointer;
+            font-weight: 700;
+            transition: transform 0.2s ease;
+        }
+
+        button:hover {
+            transform: translateY(-1px);
+        }
+
+        .primary {
+            background: var(--primary);
+            color: white;
+        }
+
+        .secondary {
+            background: var(--accent);
+            color: var(--primary-dark);
+        }
+
+        .danger {
+            background: var(--danger);
+            color: white;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 14px 12px;
+            border-bottom: 1px solid #edf2ee;
+        }
+
+        th {
+            background: #f7faf7;
+            font-size: 0.88rem;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            color: var(--muted);
+        }
+
+        .badge {
+            display: inline-block;
+            border-radius: 999px;
+            padding: 6px 10px;
+            font-size: 0.8rem;
+            font-weight: 700;
+        }
+
+        .available {
+            background: #e6f6ea;
+            color: #1d7041;
+        }
+
+        .expired {
+            background: #fde8e8;
+            color: #a04242;
+        }
+
+        .actions {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .empty {
+            text-align: center;
+            color: var(--muted);
+            padding: 24px;
+        }
+
+        @media (max-width: 800px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+
+            .header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>My Pantry</h1>
+            <button class="secondary" id="refreshButton">Refresh list</button>
+        </div>
+
+        <div class="grid">
+            <section class="card">
+                <h2>Add a product</h2>
+                <form id="productForm">
+                    <label for="name">Name</label>
+                    <input id="name" name="name" required />
+
+                    <label for="description">Description</label>
+                    <textarea id="description" name="description" required></textarea>
+
+                    <div class="checkbox-row">
+                        <label class="checkbox-item">
+                            <input type="checkbox" id="isAvailable" checked />
+                            Available
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" id="isExpired" />
+                            Expired
+                        </label>
+                    </div>
+
+                    <button class="primary" type="submit">Save product</button>
+                </form>
+            </section>
+
+            <section class="card">
+                <h2>Inventory</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="productTableBody"></tbody>
+                </table>
+            </section>
+        </div>
+    </div>
+
+    <script>
+        const productTableBody = document.getElementById('productTableBody');
+        const productForm = document.getElementById('productForm');
+
+        async function loadProducts() {
+            const response = await fetch('/api/products');
+            const products = await response.json();
+
+            if (!Array.isArray(products) || products.length === 0) {
+                productTableBody.innerHTML = '<tr><td colspan="3" class="empty">No products yet.</td></tr>';
+                return;
+            }
+
+            productTableBody.innerHTML = products.map(product => `
+                <tr>
+                    <td>
+                        <strong>${product.name}</strong><br>
+                        <small>${product.description}</small>
+                    </td>
+                    <td>
+                        ${product.isExpired ? '<span class="badge expired">Expired</span>' : product.isAvailable ? '<span class="badge available">Available</span>' : '<span class="badge">Unavailable</span>'}
+                    </td>
+                    <td>
+                        <div class="actions">
+                            <button class="secondary" type="button" data-id="${product.id}" data-action="toggle-available">Toggle available</button>
+                            <button class="secondary" type="button" data-id="${product.id}" data-action="toggle-expired">Toggle expired</button>
+                            <button class="danger" type="button" data-id="${product.id}" data-action="delete">Delete</button>
+                        </div>
+                    </td>
+                </tr>
+            `).join('');
+        }
+
+        productForm.addEventListener('submit', async (event) => {
+            event.preventDefault();
+
+            const payload = {
+                name: document.getElementById('name').value.trim(),
+                description: document.getElementById('description').value.trim(),
+                isAvailable: document.getElementById('isAvailable').checked,
+                isExpired: document.getElementById('isExpired').checked
+            };
+
+            await fetch('/api/products', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(payload)
+            });
+
+            productForm.reset();
+            document.getElementById('isAvailable').checked = true;
+            await loadProducts();
+        });
+
+        document.getElementById('refreshButton').addEventListener('click', loadProducts);
+
+        productTableBody.addEventListener('click', async (event) => {
+            const button = event.target.closest('button');
+            if (!button) return;
+
+            const { id, action } = button.dataset;
+            const productResponse = await fetch(`/api/products/${id}`);
+            const product = await productResponse.json();
+
+            if (action === 'delete') {
+                await fetch(`/api/products/${id}`, { method: 'DELETE' });
+            }
+
+            if (action === 'toggle-available') {
+                product.isAvailable = !product.isAvailable;
+                await fetch(`/api/products/${id}`, {
+                    method: 'PUT',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(product)
+                });
+            }
+
+            if (action === 'toggle-expired') {
+                product.isExpired = !product.isExpired;
+                await fetch(`/api/products/${id}`, {
+                    method: 'PUT',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(product)
+                });
+            }
+
+            await loadProducts();
+        });
+
+        loadProducts();
+    </script>
+</body>
+</html>

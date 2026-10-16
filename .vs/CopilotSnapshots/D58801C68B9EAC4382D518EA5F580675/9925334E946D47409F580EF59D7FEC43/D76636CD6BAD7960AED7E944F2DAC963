@@ -1,0 +1,9 @@
+﻿# Database Configuration
+DB_SERVER=localhost,1433
+DB_NAME=MyPantryDb
+DB_USER=sa
+DB_PASSWORD=MyStrongPassword!123
+DB_TRUST_SERVER_CERTIFICATE=True
+
+# API Configuration
+ASPNETCORE_ENVIRONMENT=Development

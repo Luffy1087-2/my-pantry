@@ -1,0 +1,31 @@
+﻿services:
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: mypantry-sql
+    environment:
+      ACCEPT_EULA: "Y"
+      MSSQL_SA_PASSWORD: "MyStrongPassword!123"
+    ports:
+      - "1433:1433"
+    volumes:
+      - sqlserver-data:/var/opt/mssql
+
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: mypantry-api
+    depends_on:
+      - sqlserver
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      DB_SERVER: sqlserver,1433
+      DB_NAME: MyPantryDb
+      DB_USER: sa
+      DB_PASSWORD: MyStrongPassword!123
+      DB_TRUST_SERVER_CERTIFICATE: True
+    ports:
+      - "8080:8080"
+
+volumes:
+  sqlserver-data:

@@ -1,0 +1,103 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\franc\\Documents\\repos\\my-pantry\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\franc\\.copilot\\plans\\plan-configurare-credenziali-database-da-variabili-di-ambiente.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|MarkdownSecurePreview"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB19673E-A186-D35B-DB94-6487B811C09F}|MyPantry.Api\\MyPantry.Api.csproj|c:\\users\\franc\\documents\\repos\\my-pantry\\mypantry.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB19673E-A186-D35B-DB94-6487B811C09F}|MyPantry.Api\\MyPantry.Api.csproj|solutionrelative:mypantry.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB19673E-A186-D35B-DB94-6487B811C09F}|MyPantry.Api\\MyPantry.Api.csproj|c:\\users\\franc\\documents\\repos\\my-pantry\\mypantry.api\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB19673E-A186-D35B-DB94-6487B811C09F}|MyPantry.Api\\MyPantry.Api.csproj|solutionrelative:mypantry.api\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\franc\\Documents\\repos\\my-pantry\\.env.example||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:.env.example||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\franc\\Documents\\repos\\my-pantry\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": ".gitignore",
+              "DocumentMoniker": "C:\\Users\\franc\\Documents\\repos\\my-pantry\\.gitignore",
+              "RelativeDocumentMoniker": ".gitignore",
+              "ToolTip": "C:\\Users\\franc\\Documents\\repos\\my-pantry\\.gitignore",
+              "RelativeToolTip": ".gitignore",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-10-16T13:12:24.754Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": ".env.example",
+              "DocumentMoniker": "C:\\Users\\franc\\Documents\\repos\\my-pantry\\.env.example",
+              "RelativeDocumentMoniker": ".env.example",
+              "ToolTip": "C:\\Users\\franc\\Documents\\repos\\my-pantry\\.env.example",
+              "RelativeToolTip": ".env.example",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-10-16T13:12:12.493Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "plan-configurare-credenziali-database-da-variabili-di-ambiente.md [Anteprima]",
+              "DocumentMoniker": "C:\\Users\\franc\\.copilot\\plans\\plan-configurare-credenziali-database-da-variabili-di-ambiente.md",
+              "RelativeDocumentMoniker": "..\\..\\..\\.copilot\\plans\\plan-configurare-credenziali-database-da-variabili-di-ambiente.md",
+              "ToolTip": "C:\\Users\\franc\\.copilot\\plans\\plan-configurare-credenziali-database-da-variabili-di-ambiente.md [Anteprima]",
+              "RelativeToolTip": "..\\..\\..\\.copilot\\plans\\plan-configurare-credenziali-database-da-variabili-di-ambiente.md [Anteprima]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2026-10-16T13:11:15.715Z",
+              "EditorCaption": " [Anteprima]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\franc\\Documents\\repos\\my-pantry\\MyPantry.Api\\Program.cs",
+              "RelativeDocumentMoniker": "MyPantry.Api\\Program.cs",
+              "ToolTip": "C:\\Users\\franc\\Documents\\repos\\my-pantry\\MyPantry.Api\\Program.cs",
+              "RelativeToolTip": "MyPantry.Api\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-16T13:03:35.787Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ProductsController.cs",
+              "DocumentMoniker": "C:\\Users\\franc\\Documents\\repos\\my-pantry\\MyPantry.Api\\Controllers\\ProductsController.cs",
+              "RelativeDocumentMoniker": "MyPantry.Api\\Controllers\\ProductsController.cs",
+              "ToolTip": "C:\\Users\\franc\\Documents\\repos\\my-pantry\\MyPantry.Api\\Controllers\\ProductsController.cs",
+              "RelativeToolTip": "MyPantry.Api\\Controllers\\ProductsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-15T20:41:54.415Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
